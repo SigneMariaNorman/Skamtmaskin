@@ -1,0 +1,17 @@
+body {
+    background-color: #00008B;
+    color: #F0F8FF; 
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+button {
+    background-color: #F0F8FF;
+    color: #00008B;
+}
+p {
+    font-size: 26px;
+}
