@@ -12,6 +12,30 @@ const programmingJokes = [
 ];
 function showRandomJoke() {
     const jokeElement = document.getElementById("skamt");
-    const randomIndex = Math.floor(Math.random() * programmingJokes.length);
-    jokeElement.innerText = programmingJokes[randomIndex];
+    let firstIndex = Math.floor(Math.random() * programmingJokes.length);
+    let secondIndex; 
+    do {
+        secondIndex = Math.floor(Math.random() * programmingJokes.length);
+    } while (secondIndex === firstIndex);
+    //const randomIndex = Math.floor(Math.random() * programmingJokes.length);
+    jokeElement.innerText = `${programmingJokes[firstIndex]}\n\n${programmingJokes[secondIndex]}`;
 }
+/* 
+function showRandomJoke() {
+    const jokeElement = document.getElementById("skamt");
+
+    // Slumpa två olika index
+    let firstIndex = Math.floor(Math.random() * programmingJokes.length);
+    let secondIndex;
+
+    // Se till att andra indexet är **olikt** det första
+    do {
+        secondIndex = Math.floor(Math.random() * programmingJokes.length);
+    } while (secondIndex === firstIndex);
+
+    // Visa båda skämten
+    jokeElement.innerText = `${programmingJokes[firstIndex]}\n\n${programmingJokes[secondIndex]}`;
+}
+
+
+*/
